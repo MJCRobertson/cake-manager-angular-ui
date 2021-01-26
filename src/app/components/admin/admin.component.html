@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Cake Name</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+    <tr *ngFor="let cake of cakes._embedded.cakeList">
+      <td>
+        <a [routerLink]="['/admin/view', cake.id]">{{cake.title}}</a>
+      </td>
+      <td>
+        {{cake.desc}}
+      </td>
+      <td>
+        <img src="{{cake.image}}" alt="">
+      </td>
+    </tr>
+  </table>
+</div>
